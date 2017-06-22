@@ -4,7 +4,7 @@ from django.db import models
 
 class Snippets(models.Model):
 
-	title
-	language
-	snippet
-	description
+	title = models.CharField(max_length=128)
+	language = models.CharField(max_length=64)
+	snippet = models.CharField(max_length=512)
+	description = models.CharField(max_length=256)
